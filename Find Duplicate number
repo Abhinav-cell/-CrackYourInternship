@@ -4,7 +4,7 @@ public:
     int findDuplicate(vector<int>& nums) {
         
         sort(nums.begin(),nums.end());
-        for(int i=0;i<nums.size();i++)
+        for(int i=1;i<nums.size();i++)
         {
             if(nums[i]==nums[i-1])
             {
@@ -24,6 +24,7 @@ public:
         int cur= abs(nums[i]);
         if(nums[cur]<0)
             int duplicate=nums[cur];
+            break;
             else
             nums[cur]*=-1;
             }
